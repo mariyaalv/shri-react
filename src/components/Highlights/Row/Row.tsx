@@ -21,6 +21,7 @@ export const Row: FC<RowProps> = ({ analysisData, data }) => {
   return (
     <div className={cls.container}>
       {analysisData && analysisData.map((item) => {
+        if (!(item.id in data)) return null;
         const value = data[item.id];
         const formattedValue = getFormattedValue(value, item.format);
         return (

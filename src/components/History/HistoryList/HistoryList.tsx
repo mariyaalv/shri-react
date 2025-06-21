@@ -1,15 +1,20 @@
-import { HistoryItem } from '../HistoryItem/HistoryItem';
+import type { HistoryItem } from '../../../store/useHistoryStore';
+import { HistoryItemCard } from '../HistoryItem/HistoryItem';
 import cls from './HistoryList.module.css';
 
 interface HistoryListProps {
-  items: any[];
+  items: HistoryItem[];
+  onDelete?: () => void;
 }
 
 export const HistoryList = ({ items }: HistoryListProps) => {
   return (
     <div className={cls.HistoryList}>
-      {items.map((item, index) => (
-        <HistoryItem key={index} {...item} />
+      {items.map((item) => (
+        <HistoryItemCard
+          key={item.id}
+          item={item}
+        />
       ))}
     </div>
   );

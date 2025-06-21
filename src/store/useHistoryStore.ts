@@ -2,7 +2,7 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import type { AnalysisData } from '../api/types/types';
 
-interface HistoryItem {
+export interface HistoryItem {
   id: string;
   timestamp: string;
   fileName: string;

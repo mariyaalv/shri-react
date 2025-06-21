@@ -21,7 +21,9 @@ export const renderUploadButton = (
       <>
         <div className={cls.uploadSuccessContainer}>
           <Button theme={ButtonUploadTheme.PROCESS} mode="upload">
-            {file?.name || 'Ваш файл'}
+            <span className={cls.uploadButtonText}>
+              {file?.name || 'Ваш файл'}
+            </span> 
           </Button>
           <Button
             theme={ButtonDefaultTheme.CLEAR}

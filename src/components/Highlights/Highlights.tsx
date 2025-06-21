@@ -4,7 +4,7 @@ import cls from './Highlights.module.css';
 import { Row, type HighlightItem } from './Row/Row';
 import { useFileStore } from '../../store';
 
-const HIGHLIGHTS: HighlightItem[] = [
+export const HIGHLIGHTS: HighlightItem[] = [
   {
     id: 'total_spend_galactic',
     label: 'общие расходы в галактических кредитах',
@@ -56,8 +56,12 @@ export const Highlights: FC<HighlightsProps> = ({data}) => {
   
   return (
     <div className={cls.Highlights}>
-      {(status === 'parsing' || status === 'done') ? (
-        <Row analysisData={HIGHLIGHTS} data={data} />
+      {status === 'parsing' || status === 'done' ? (
+        data && Object.keys(data).length > 0 ? (
+          <Row analysisData={HIGHLIGHTS} data={data} />
+        ) : (
+          <p className={cls.paragraph}>Загрузка...</p>
+        )
       ) : (
         <p className={cls.paragraph}>
           Здесь

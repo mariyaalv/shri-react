@@ -1,1 +1,74 @@
-.HistoryItem {}
+.container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.HistoryItem {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 2fr;
+  height: 87px;
+  background-color: var(--color-purple);
+  border-radius: 40px;
+  align-items: center;
+  padding: 25px;
+  font-size: 30px;
+  width: 100%;
+  cursor: default;
+  transition: background-color 0.2s;
+}
+
+.HistoryItem--clickable {
+  cursor: pointer;
+}
+
+.HistoryItem--clickable:hover {
+  opacity: 0.8;
+}
+
+.fileNameText h3 {
+  display: block;
+  font-weight: 400;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.fileName,
+.sucess,
+.error {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.fileName {
+  max-width: 300px;
+  overflow: hidden;
+}
+
+.fileNameText {
+  width: 100%;
+  max-width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.sucess {
+  grid-column: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error {
+  grid-column: 4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.text {
+  color: #8F64AE;
+}
