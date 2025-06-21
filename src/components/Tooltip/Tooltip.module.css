@@ -1,0 +1,10 @@
+.Tooltip {
+  width: max-content;
+  font-size: 35px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.error {
+  color: var(--color-orange);
+}

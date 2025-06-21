@@ -1,0 +1,14 @@
+.LogoBlock {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.LogoBlock p {
+  font-weight: 500;
+  font-size: 27px;
+  text-transform: uppercase;
+  background-color: var(--color-purple);
+  align-items: center;
+  padding: 6px;
+}

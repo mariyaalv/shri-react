@@ -1,0 +1,12 @@
+.btn {
+  border-radius: 10px;
+  width: 70px;
+  height: 70px;
+}
+
+.uploadSuccessContainer,
+.uploadErrorContainer,
+.uploadDoneContainer {
+  display: flex;
+  gap: 10px;
+}

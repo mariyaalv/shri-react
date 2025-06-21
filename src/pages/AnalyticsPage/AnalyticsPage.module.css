@@ -1,0 +1,15 @@
+.AnalyticsPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn {
+  margin-block-start: 20px;
+  margin-inline: auto;
+  width: max-content;
+}
+
+.error {
+  margin: auto;
+}

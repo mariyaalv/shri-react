@@ -1,0 +1,13 @@
+.link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 30px;
+  text-decoration: none;
+  outline: none;
+  flex-wrap: wrap;
+}
+
+.active {
+  border-bottom: 2px solid var(--text-main-color);
+}

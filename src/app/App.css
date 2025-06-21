@@ -1,0 +1,41 @@
+@import '../assets/fonts/fonts.css';
+@import '../variables.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+blockquote,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: var(--bg-color);
+  overflow: hidden;
+}
+
+.wrapper {
+  padding-inline: 40px;
+}

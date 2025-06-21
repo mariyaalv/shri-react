@@ -1,0 +1,17 @@
+.Highlights {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-block-start: 60px;
+}
+
+.paragraph {
+  margin-block-start: 200px;
+  line-height: 1.1;
+  color: var(--color-purple);
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

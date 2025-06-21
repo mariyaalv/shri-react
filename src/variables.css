@@ -1,0 +1,22 @@
+:root {
+  --color-white: #FFF;
+  --color-dark: #201B10;
+  --color-grey: #787878;
+  --color-grey-light: #C0C0C0;
+  --color-purple: #CB81FF;
+  --color-green: #2AE881;
+  --color-green-light: #D4FAE6;
+  --color-orange: #FF5F00;
+  --color-yellow: #FCE300;
+  --color-lilac: #EACDFF;
+  --color-pink: #FCE2FF;
+
+  --bg-color: var(--color-pink);
+  --bg-modal-row: var(--color-lilac);
+
+  --text-main-color: var(--color-dark);
+  --text-secondary-color: var(--color-grey);
+  --text-light-color: var(--color-white);
+
+  --row-border-radius: 40px;
+}

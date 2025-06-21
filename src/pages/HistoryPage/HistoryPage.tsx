@@ -1,20 +1,14 @@
-import { HistoryList } from '../../components/History/HistoryList/HistoryList';
+import type { FC } from 'react';
 import cls from './HistoryPage.module.css';
 
-interface HistoryPageProps {
-  items: any[];
-}
+// interface HistoryPageProps {
+// }
 
-export const HistoryPage = ({ items }: HistoryPageProps) => {
-  // const { history, loadHistory } = useHistoryStore();
-
-  // useEffect(() => {
-  //   loadHistory();
-  // }, [loadHistory]);
+export const HistoryPage: FC = () => {
 
   return (
-    <div className={cls.HistoryPage}>
-      {Boolean(items.length) && <HistoryList items={items} />}
-    </div>
+    <main className={cls.HistoryPage}>
+      Страница Истории
+    </main>
   );
 };

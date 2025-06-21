@@ -1,8 +1,12 @@
+import { LogoBlock } from './LogoBlock';
 import cls from './Header.module.css';
+import { Navbar } from './Navbar/Navbar';
 
-interface HeaderProps {}
-
-export const Header = (props: HeaderProps) => {
-  const rule = 0;
-  return <div className={cls.Header}></div>;
+export const Header = () => {
+  return (
+    <header className={cls.Header}>
+      <LogoBlock />
+      <Navbar />
+    </header>
+  );
 };
