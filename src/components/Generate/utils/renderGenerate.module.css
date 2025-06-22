@@ -1,0 +1,15 @@
+.default {
+  font-weight: bold;
+}
+
+.clear {
+  border-radius: 10px;
+  width: 70px;
+  height: 70px;
+}
+
+.uploadSuccessContainer,
+.uploadErrorContainer {
+  display: flex;
+  gap: 10px;
+}

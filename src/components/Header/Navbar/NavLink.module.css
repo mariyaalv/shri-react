@@ -8,6 +8,10 @@
   flex-wrap: wrap;
 }
 
+.link:visited {
+  color: inherit;
+}
+
 .active {
   border-bottom: 2px solid var(--text-main-color);
 }

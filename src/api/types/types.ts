@@ -1,3 +1,5 @@
+import type { WithErrors } from "../../store/useReportStore";
+
 export type AnalysisData = {
   total_spend_galactic: number;
   average_spend_galactic: number;
@@ -8,4 +10,10 @@ export type AnalysisData = {
   less_spent_at?: number;
   less_spent_civ?: string;
   less_spent_value?: number;
+};
+
+export type GenerateData = {
+  size: number;
+  withErrors?: WithErrors;
+  maxSpend?: string;
 };

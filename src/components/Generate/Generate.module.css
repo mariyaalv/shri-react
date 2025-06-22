@@ -1,0 +1,14 @@
+.paragraph {
+  font-size: 33px;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.btn {
+  margin: auto;
+}
