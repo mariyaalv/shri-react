@@ -40,7 +40,9 @@
   font-weight: 500;
 }
 
-.success {
+.success,
+.parsing,
+.done {
   background-color: inherit;
   border: 1px solid var(--color-dark);
 }

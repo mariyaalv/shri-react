@@ -80,6 +80,8 @@ export const DragDropCsvFile: FC = () => {
           [cls.dragOver]: isDragOver,
           [cls.success]: status === 'success',
           [cls.error]: status === 'error',
+          [cls.parsing]: status === 'parsing',
+          [cls.done]: status === 'done',
         })}
         onDragEnter={handleDrag}
         onDragOver={handleDrag}
