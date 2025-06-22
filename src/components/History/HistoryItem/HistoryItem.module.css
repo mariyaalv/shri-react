@@ -72,3 +72,18 @@
 .text {
   color: #8F64AE;
 }
+
+.Highlights {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.row {
+  width: 900px;
+  width: 100%;
+  background-color: var(--color-lilac);
+  border-radius: 24px;
+}

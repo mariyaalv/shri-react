@@ -6,10 +6,10 @@ import { useFileStore } from '../../store';
 import { Button, ButtonDefaultTheme } from '../../components/Button/Button';
 import { fetchAggregate } from '../../api/aggregate/aggregate';
 import { useHistoryStore } from '../../store/useHistoryStore';
+import type { AnalysisData } from '../../api/types/types';
 
 export const AnalyticsPage: FC = () => {
-  const { file, status, data, setError, setStatus, setData } =
-    useFileStore();
+  const { file, status, data, setError, setStatus, setData } = useFileStore();
 
   const { addToHistory } = useHistoryStore.getState();
 
@@ -19,15 +19,17 @@ export const AnalyticsPage: FC = () => {
     setError(undefined);
 
     try {
+      let finalData: AnalysisData | null = null;
       await fetchAggregate(file, 10000, (chunk) => {
         setData(chunk);
+        finalData = chunk;
       });
       setStatus('done');
       addToHistory({
         id: new Date().toString(),
         timestamp: new Date().toISOString(),
         fileName: file.name,
-        date: data!,
+        date: finalData,
         status: 'success',
       });
       console.log(useHistoryStore.getState());

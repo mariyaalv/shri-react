@@ -23,7 +23,7 @@ export const renderUploadButton = (
           <Button theme={ButtonUploadTheme.PROCESS} mode="upload">
             <span className={cls.uploadButtonText}>
               {file?.name || 'Ваш файл'}
-            </span> 
+            </span>
           </Button>
           <Button
             theme={ButtonDefaultTheme.CLEAR}
@@ -43,7 +43,9 @@ export const renderUploadButton = (
       <>
         <div className={cls.uploadErrorContainer}>
           <Button theme={ButtonUploadTheme.ERROR} mode="upload">
-            {file?.name}
+            <span className={cls.uploadButtonText}>
+              {file?.name || 'Ваш файл'}
+            </span>
           </Button>
           <Button
             theme={ButtonDefaultTheme.CLEAR}
@@ -74,7 +76,9 @@ export const renderUploadButton = (
       <>
         <div className={cls.uploadDoneContainer}>
           <Button theme={ButtonUploadTheme.DONE} mode="upload">
-            {file?.name || 'Ваш файл'}
+            <span className={cls.uploadButtonText}>
+              {file?.name || 'Ваш файл'}
+            </span>
           </Button>
           <Button
             theme={ButtonDefaultTheme.CLEAR}

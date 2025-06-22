@@ -17,7 +17,7 @@ import { HIGHLIGHTS } from '../../Highlights/Highlights';
 
 interface HistoryItemProps {
   item: HistoryItem;
-  onRemove?: () => void;
+  onRemove?: (id: string) => void;
 }
 
 export const HistoryItemCard: FC<HistoryItemProps> = ({ item, onRemove }) => {
@@ -28,6 +28,7 @@ export const HistoryItemCard: FC<HistoryItemProps> = ({ item, onRemove }) => {
       setIsModalOpen(true);
     }
   };
+
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
@@ -73,12 +74,21 @@ export const HistoryItemCard: FC<HistoryItemProps> = ({ item, onRemove }) => {
           </>
         )}
       </div>
-      <Button theme={ButtonUploadTheme.ACTIVE} onClick={onRemove}>
+      <Button
+        theme={ButtonUploadTheme.ACTIVE}
+        onClick={() => onRemove?.(item.id)}
+      >
         <img src={TrashIcon} className={cls.icon} alt={'удалить файл'} />
       </Button>
       {isModalOpen && item.date && (
         <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
-          <Row analysisData={HIGHLIGHTS} data={item.date} />
+          <div className={cls.Highlights}>
+            <Row
+              analysisData={HIGHLIGHTS}
+              data={item.date}
+              rowClassName={cls.row}
+            />
+          </div>
         </Modal>
       )}
     </div>

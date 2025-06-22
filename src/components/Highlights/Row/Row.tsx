@@ -1,6 +1,7 @@
 import type { FC } from 'react';
 import type { AnalysisData } from '../../../api/types/types';
 import cls from './Row.module.css';
+import classNames from 'classnames';
 import {
   getFormattedValue,
   type FormatData,
@@ -15,22 +16,24 @@ export type HighlightItem = {
 interface RowProps {
   analysisData: HighlightItem[];
   data: AnalysisData;
+  rowClassName?: string;
 }
 
-export const Row: FC<RowProps> = ({ analysisData, data }) => {
+export const Row: FC<RowProps> = ({ analysisData, data, rowClassName }) => {
   return (
     <div className={cls.container}>
-      {analysisData && analysisData.map((item) => {
-        if (!(item.id in data)) return null;
-        const value = data[item.id];
-        const formattedValue = getFormattedValue(value, item.format);
-        return (
-          <div key={item.id} className={cls.row}>
-            <span className={cls.value}>{formattedValue}</span>
-            <span className={cls.label}>{item.label}</span>
-          </div>
-        );
-      })}
+      {analysisData &&
+        analysisData.map((item) => {
+          if (!(item.id in data)) return null;
+          const value = data[item.id];
+          const formattedValue = getFormattedValue(value, item.format);
+          return (
+            <div key={item.id} className={classNames(cls.row, rowClassName)}>
+              <span className={cls.value}>{formattedValue}</span>
+              <span className={cls.label}>{item.label}</span>
+            </div>
+          );
+        })}
     </div>
   );
 };

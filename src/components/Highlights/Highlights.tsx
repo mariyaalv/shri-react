@@ -57,11 +57,9 @@ export const Highlights: FC<HighlightsProps> = ({data}) => {
   return (
     <div className={cls.Highlights}>
       {status === 'parsing' || status === 'done' ? (
-        data && Object.keys(data).length > 0 ? (
+        data && Object.keys(data).length > 0 && (
           <Row analysisData={HIGHLIGHTS} data={data} />
-        ) : (
-          <p className={cls.paragraph}>Загрузка...</p>
-        )
+        ) 
       ) : (
         <p className={cls.paragraph}>
           Здесь
