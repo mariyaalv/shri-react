@@ -14,12 +14,12 @@ npm install
 ```
 npm run build
 ```
-5. Просмотр production-сборки:
+4. Просмотр production-сборки:
 ```
 npm run preview
 ```
 
-7. Линтинг и автоисправление:
+5. Линтинг и автоисправление:
 ```
 npm run lint
 npm run lint:fix
